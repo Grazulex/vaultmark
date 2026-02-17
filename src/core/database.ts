@@ -131,9 +131,10 @@ export function getNextSerial(): number {
 }
 
 export function getExpiredCredentials(): Credential[] {
+	const now = new Date().toISOString();
 	const rows = getDb()
-		.prepare("SELECT * FROM credentials WHERE status = 'active' AND expires_at <= datetime('now')")
-		.all() as any[];
+		.prepare("SELECT * FROM credentials WHERE status = 'active' AND expires_at <= ?")
+		.all(now) as any[];
 	return rows.map(mapRow);
 }
 
