@@ -1,0 +1,9 @@
+export { initCommand } from './init';
+export { statusCommand } from './status';
+export { grantCommand } from './grant';
+export { revokeCommand } from './revoke';
+export { listCommand } from './list';
+export { passwordCommand } from './password';
+export { setupHostCommand } from './setup-host';
+export { cleanupCommand } from './cleanup';
+export { auditCommand } from './audit';

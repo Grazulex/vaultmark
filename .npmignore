@@ -1,0 +1,8 @@
+src/
+tests/
+scripts/
+.gitignore
+tsconfig.json
+biome.json
+vitest.config.ts
+backlog/
